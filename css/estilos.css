@@ -1,0 +1,474 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Cuando demos border o padding que queden en este modelo de caja*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(0,0,0,1);
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+    max-width: 1100px;
+}
+
+.container {
+    width: 100%;
+       margin: auto;
+   }
+   
+   .container--flex {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: center;
+   }
+                               
+   .column {
+       width: 100%;
+   }
+
+/*----estilos del header----*/
+
+header {
+    background:#012;
+    text-align: center;
+    top: 0;
+    padding: 10px;
+}
+
+h1 {
+    margin: auto;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 10px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+/*---Banner---*/
+
+#banner {
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.banner__img {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner__img:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+}
+
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#banner .contenedor {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+ h2 {
+    font-size: 1.6em;
+    margin-bottom: 12px;
+}
+
+#banner .contenedor__link {
+    display: block;
+    margin-top: 30px;
+} 
+
+#banner a {
+    width: 200px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid #fff;
+    transition: all .3s;
+}
+
+#banner a:hover {
+    background: rgba(51, 71, 128, 0.555);
+    color: #fff;
+    transition: .3s;
+}
+
+/*----------------------------------gracias------------------------------------*/
+.gracias {
+    margin: 20px;
+    padding: 17px;
+    color: #fff;
+    background: rgba(1, 2, 40, 0.4);
+    text-align: center;
+}
+
+.gracias__img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.gracias .contenedor__link {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+} 
+
+.gracias a {
+    width: 200px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid #fff;
+    transition: all .3s;
+}
+
+.gracias a:hover {
+    background: rgba(51, 71, 128, 0.555);
+    color: #fff;
+    transition: .3s;
+}
+
+
+
+
+
+/*----informacion-----*/
+
+.informacion {
+    text-align: center;
+    background: rgba(1, 2, 43, 0.1);
+    width: 100%;
+    color: #fff;
+}
+
+
+.informacion__img {
+    width: 100%;
+    border-bottom: 1px solid #412;
+    border-top: 1px solid #412;
+}
+
+.informacion__img img {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    padding: 10px;
+}
+
+.informacion__txt {
+    padding: 20px;
+    text-align: justify;
+
+}
+
+
+/*----------------------------Contacto----------------------------------*/
+
+#contacto {
+    margin-top: 25px;
+    width: 100%;
+    background: rgba(1, 2, 43, 0.1);
+    color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    -webkit-box-shadow: 0px 5px 26px 8px rgb(10, 10, 10);
+    border: none;
+}
+
+.contacto__txt {
+    padding: 10px;
+    border-bottom: 1px solid #412;
+}
+
+.contacto__txt [class*="icon-"] {
+    display: block;
+    padding: 7px;
+    margin-top: 10px;
+}
+
+.contacto__sociales {
+    display: block;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+.contacto__sociales a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: all .5s;
+    align-items: center;
+}
+
+.contacto__sociales a:hover {
+    transition: all .5s;
+    background: #000;
+    top: 1px;
+    border-radius: 9px;
+    width: 200px;
+    margin: auto;
+
+    animation: texto;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+@keyframes texto {
+    from {
+transform: scale(1);
+    }
+
+    to {
+transform: scale(1.1);
+    }
+}
+
+/*----------------------------formulario-----------------------------------------------------------*/
+
+.formulario {
+    padding: 6px;
+    display: block;
+}
+
+.formulario form {
+    width: 100%;
+}
+
+.formulario form input, textarea, select {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid #412;
+    background: transparent;
+    resize: none;
+}
+
+.formulario form input, textarea {
+   color: #fff;
+}
+
+.formulario form input:focus {
+    border: none;
+    border-bottom: 1px solid #fff;
+    transition: all .5s;
+    outline: none; /*se quita el borde cuando se selecciona un input*/
+    background: linear-gradient(to bottom, transparent, #444);
+}
+
+.formulario form textarea:focus {
+    border: none;
+    border-bottom: 1px solid #fff;
+    transition: all .5s;
+    outline: none; /*se quita el borde cuando se selecciona un input*/
+    background: linear-gradient(to bottom, transparent, #444);
+}
+
+.formulario form select:focus {
+    border: none;
+    border-bottom: 1px solid #fff;
+    transition: all .5s;
+    outline: none; /*se quita el borde cuando se selecciona un input*/
+    background: linear-gradient(to bottom, transparent, #444);
+}
+
+.formulario__buttom {
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.formulario__buttom button {
+    padding: 10px;
+    width: 230px;
+    background: #012;
+    color: #fff;
+    border: 1px solid #412;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.formulario__buttom button:hover {
+transition: all .3s;
+background: #fff;
+color: #012;
+
+}
+
+footer {
+background:  #012;
+color: #fff;
+text-align: center;
+margin-top: 40px;
+-webkit-box-shadow: 0px 5px 26px 8px rgb(10, 10, 10);
+}
+
+footer .contenedor {
+    text-align: center;
+}
+
+/*-----------------------Estilos responsive---------------------------*/
+
+@media screen and (min-width:480px) {
+
+    .column--50 {
+        width: 50%;
+    }
+
+    .informacion__img {
+        border: none;
+    }
+
+    .informacion__img img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .informacion__txt {
+        border-left: 1px solid #412;
+        padding: 30px;
+    }
+
+    .contacto__txt {
+        border: none;
+    }
+   
+    .formulario {
+        border-left: 1px solid #412;
+    }
+
+    .formulario form {
+        padding: 10px;
+    }
+
+    .formulario form input, textarea, select {
+       width: 200px;
+    }
+
+    .formulario__buttom button {
+        width: 200px;
+    }
+
+    #contacto .container--flex {
+        align-items: flex-start;
+    }
+
+    .our-team__img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .column--33 {
+        width: 32%; /*podemos reutilizar esta clase. de un 100% del container, todo lo pone a 33. tienen que ser 3 elementos para que de el resultado aproximado de 100%. 33*3 = 99 */
+    }
+
+}
+
+@media screen and (min-width:768px) {
+  .informacion {
+      margin-bottom: 30px;
+  }
+
+  .formulario form input, textarea, select {
+    width: 300px;
+    max-width: 700px;
+ }
+
+ #banner {
+    height: 300px;
+    overflow: hidden; /*Aqui le estamos dando la alturala al banne
+    Como la imagen se sale del banner, el atributo OVERFLOW: HIDDEN nos ayudará a que la parte 
+    que sale se oculte*/
+}
+
+#banner .banner__img {
+    height: auto;
+    margin-top: -100px; /*lo podemos usar para centrar la imagen*/
+}
+.contacto__sociales .column--50-25 {
+  display: flex;
+  width: 50%;
+}
+
+.our-team__img {
+    width: 220px;
+    height: 220px;
+}
+
+}
+
+@media screen and (min-width:1024px) {
+    #banner .banner__img {
+        margin-top: -150px;
+    }
+
+    .contacto__sociales .column--50-25 {
+        display: inline-block;
+      }
+
+      .our-team__img {
+        width: 320px;
+        height: 320px;
+    }
+
+}
+
+@media screen and (min-width:1600px) {
+
+    #banner .banner__img {
+        margin-top: -300px;
+    }
+
+    .our-team__img {
+        width: 420px;
+        height: 420px;
+    }
+}
